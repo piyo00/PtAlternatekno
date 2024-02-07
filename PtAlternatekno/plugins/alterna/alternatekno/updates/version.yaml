@@ -1,0 +1,14 @@
+v1.0.1:
+    - 'Initialize plugin'
+v1.0.2:
+    - 'Created table alterna_alternatekno_job'
+    - builder_table_create_alterna_alternatekno_job.php
+v1.0.3:
+    - 'Updated table alterna_alternatekno_job'
+    - builder_table_update_alterna_alternatekno_job.php
+v1.0.4:
+    - 'Created table alterna_alternatekno_portofolio'
+    - builder_table_create_alterna_alternatekno_portofolio.php
+v1.0.5:
+    - 'Created table alterna_alternatekno_produk'
+    - builder_table_create_alterna_alternatekno_produk.php

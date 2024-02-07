@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title_section:
+        label: rebel59.isogallery::lang.models.category.title_section
+        type: section
+    title:
+        span: left
+        placeholder: rebel59.isogallery::lang.models.category.title
+    slug:
+        placeholder: rebel59.isogallery::lang.models.category.slug
+        span: right
+        preset:
+            field: title
+            type: slug

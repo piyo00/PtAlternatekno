@@ -1,0 +1,20 @@
+fields:
+    namaporto:
+        label: 'Nama Portofolio'
+        span: auto
+        type: text
+    perusahaan:
+        label: 'Nama perusahaan'
+        span: auto
+        type: text
+    Icon:
+        label: 'Icon perusahaan'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '100'
+        imageHeight: '100'
+        type: fileupload

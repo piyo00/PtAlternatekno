@@ -1,0 +1,31 @@
+[builderList]
+modelClass = "Alterna\Alternatekno\Models\Produk"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "namaproduk"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-9 mx-auto">
+      <h1 class="underline decoration-[6px] decoration-[#FFA91C] underline-offset-[23px]  sm:text-4xl text-2xl font-bold title-font text-center text-gray-900 mb-5" x-intersect="$el.classList.add('fadeInUp')">Produk</h1>
+    </div>
+
+    <div class="container mx-auto px-5 py-24 flex flex-wrap justify-center"> 
+        {% for record in records %}
+            <!-- Repeat this section for each product in your database -->
+            <div class="product-box bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-center w-full sm:w-full h-auto mb-4 mx-2 scale-90">
+                <h3 class="text-xl font-bold mt-4 mb-5 text-center">{{ record.namaproduk }}</h3>
+                <div class="image-container relative w-full" style="padding-bottom: 56.25%;">
+                    <img src="{{ record.gambar.path }}" class="absolute inset-0 w-full h-full object-cover rounded">
+                </div>
+                <a href="{{ record.link }}" class="mt-4 inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-[#FFA91C] rounded shadow ripple hover:shadow-lg hover:bg-blue-800 focus:outline-none">
+                    Kunjungi website
+                </a>
+            </div>
+            <!-- End of repeatable section -->
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,6 @@
+plugin:
+    name: 'alterna.contact::lang.plugin.name'
+    description: 'alterna.contact::lang.plugin.description'
+    author: alterna
+    icon: oc-icon-adjust
+    homepage: ''

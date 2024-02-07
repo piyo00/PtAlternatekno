@@ -1,0 +1,14 @@
+fields:
+    pekerjaan:
+        label: Pekerjaan
+        span: auto
+        type: text
+    descpekerjaan:
+        label: 'Deskripsi pekerjaan'
+        span: auto
+        type: text
+    syarat:
+        label: 'Syarat pekerjaan'
+        size: ''
+        span: auto
+        type: richeditor

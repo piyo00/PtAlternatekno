@@ -1,0 +1,41 @@
+[builderList]
+modelClass = "Alterna\Alternatekno\Models\Job"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "pekerjaan"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+
+<section class="text-gray-600 body-font text-center mb-20"> <!-- Added mb-8 for bottom margin -->
+  <div class="container px-5 py-9 mx-auto">
+      <h1 class="underline decoration-[6px] decoration-[#FFA91C] underline-offset-[23px]  sm:text-4xl text-2xl font-bold title-font text-gray-900 mb-20 " x-intersect="$el.classList.add('fadeInUp')">Berkarir dengan kami</h1>
+      
+      <div class="accordion flex flex-col items-center text-left" x-intersect="$el.classList.add('fadeInUp')">
+        <ul class="record-list">
+          {% for record in records %}
+          <div class="accordion flex flex-col items-center justify-center mb-4" x-intersect="$el.classList.add('fadeInUp')">
+            <div class="w-1/2">
+                  <input type="checkbox" name="panel" id="panel-{{ loop.index }}" class="hidden">
+                  <label for="panel-{{ loop.index }}" class="relative block bg-white text-black p-6 shadow border-b border-grey text-md font-bold" x-data="{ open: false }" @click="open = !open">
+                    {{ record.pekerjaan }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" :class="{ 'rotate-45': open }">
+                      <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke="#FFA91C"></path>
+                      <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" stroke="#FFA91C"></path>
+                    </svg>
+                  </label>
+                  <div class="accordion__content overflow-hidden bg-grey-lighter" x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90">
+                      {% if detailsPage %}<a href="{{ detailsPage|page({ (detailsUrlParameter): self.attribute(record, detailsKeyColumn) }) }}">{% endif %}
+                      <h2 class="accordion__header pt-4 pl-4" @click="open = !open"><strong>Deskripsi Pekerjaan</strong></h2>
+                      <h2 class="accordion__header pt-4 pl-4" x-show="open">{{ record.descpekerjaan | raw}}</h2>
+                      <h2 class="accordion__header pt-4 pl-4"><strong>Persyaratan pekerjaan</strong></h2>
+                      <h2 class="accordion__header pt-4 pl-4" x-show="open">{{ record.syarat | raw}}</h2>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+      </ul>
+  </div>
+</section>

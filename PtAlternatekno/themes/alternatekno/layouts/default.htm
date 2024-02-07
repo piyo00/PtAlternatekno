@@ -1,0 +1,42 @@
+description = "default layout"
+==
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ ['assets/css/style.css']|theme }}" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    {% framework %}
+    {% scripts %}
+</head>
+<body "" x-data>
+    
+
+    {% partial 'navbar' %}
+
+
+    <section id="layout-content" >
+        {% page %}
+    </section>
+
+
+
+
+    {% partial 'footer' %}
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,18 @@
+fields:
+    namaproduk:
+        label: 'Nama Produk'
+        span: auto
+        type: text
+    link:
+        label: 'Link rproduk'
+        span: auto
+        type: text
+    gambar:
+        label: 'gambar produk'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

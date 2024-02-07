@@ -1,0 +1,9 @@
+columns:
+    namaporto:
+        label: portofolio
+        type: text
+        searchable: true
+    perusahaan:
+        label: perusahaan
+        type: text
+        searchable: true

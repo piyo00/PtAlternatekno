@@ -1,0 +1,10 @@
+name: Produk
+form: $/alterna/alternatekno/models/produk/fields.yaml
+modelClass: Alterna\Alternatekno\Models\Produk
+defaultRedirect: alterna/alternatekno/produk
+create:
+    redirect: 'alterna/alternatekno/produk/update/:id'
+    redirectClose: alterna/alternatekno/produk
+update:
+    redirect: alterna/alternatekno/produk
+    redirectClose: alterna/alternatekno/produk

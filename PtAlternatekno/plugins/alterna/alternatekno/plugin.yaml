@@ -1,0 +1,24 @@
+plugin:
+    name: 'alterna.alternatekno::lang.plugin.name'
+    description: 'alterna.alternatekno::lang.plugin.description'
+    author: Alterna
+    icon: oc-icon-briefcase
+    homepage: ''
+navigation:
+    Pekerjaan:
+        label: Alternatekno
+        url: /
+        icon: icon-briefcase
+        sideMenu:
+            Pekerjaan:
+                label: Pekerjaan
+                url: alterna/alternatekno/pekerjaan
+                icon: icon-sitemap
+            Portofolio:
+                label: Portofolio
+                url: alterna/alternatekno/portofolio
+                icon: icon-sitemap
+            Produk:
+                label: produk
+                url: alterna/alternatekno/produk
+                icon: icon-sitemap

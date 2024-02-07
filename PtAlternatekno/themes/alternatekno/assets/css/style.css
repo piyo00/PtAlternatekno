@@ -1,0 +1,128 @@
+body {
+  font-family: 'Lexend Deca';
+
+}
+
+
+@layer utilities {
+  @keyframes fadeInUp {
+      0% {
+          opacity: 0;
+          transform: translateY(50%);
+      }
+
+      100% {
+          opacity: 1 ;
+          transform: translateY(0);
+      }
+  }
+  .fadeInUp  {
+      animation: fadeInUp 1000ms ;
+  }
+
+  @keyframes fadeInLeft {
+      0% {
+          opacity: 0;
+          transform: translateX(25%);
+      }
+
+      100% {
+          opacity: 1 ;
+          transform: translateX(0);
+      }
+  }
+  .fadeInLeft  {
+      animation: fadeInLeft 1000ms ;
+  }
+  @keyframes fadeInDown {
+      0% {
+          opacity: 0;
+          transform: translateY(-50%);
+      }
+
+      100% {
+          opacity: 1 ;
+          transform: translateY(0);
+      }
+  }
+  .fadeInDown  {  
+      animation: fadeInDown 1000ms ;
+  }
+  @keyframes fadeInRight {
+      0% {
+          opacity: 0;
+          transform: translateX(-25%);
+      }
+
+      100% {
+          opacity: 1 ;
+          transform: translateX(0);
+      }
+  }
+  .fadeInRight  {
+      animation: fadeInRight 1000ms ;
+  }
+  
+}
+
+
+label:after {
+  content: '+';
+  position: absolute;
+  right: 1em;
+  color: #fff;
+}
+
+input:checked + label:after {
+  content: '-';
+  line-height: .8em;
+}
+
+.accordion__content{
+  max-height: 0em;
+  transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+input[name='panel']:checked ~ .accordion__content {
+  /* Get this as close to what height you expect */
+  max-height: 50em;
+}
+
+.hide {
+  display: none;
+}
+
+.map-container {
+  text-align: center;
+}
+
+.map-point-sm.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #FFA91C;
+}
+
+.map-point-sm:not(.active) {
+  opacity: 0.5;
+}
+
+.map-point-sm .content {
+  margin-bottom: 20px;
+}
+
+.inner-basic.division-map {
+  height: 80px; /* Adjust the height as needed */
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+}
+.animate-on-scroll {
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.animate-on-scroll > div {
+  width: 6rem;
+  height: 6rem;
+  background-color: #FF5722;
+  border-radius: 50%;
+}

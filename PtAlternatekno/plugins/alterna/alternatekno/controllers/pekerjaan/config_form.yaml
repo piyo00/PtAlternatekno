@@ -1,0 +1,10 @@
+name: Pekerjaan
+form: $/alterna/alternatekno/models/job/fields.yaml
+modelClass: Alterna\Alternatekno\Models\Job
+defaultRedirect: alterna/alternatekno/pekerjaan
+create:
+    redirect: 'alterna/alternatekno/pekerjaan/update/:id'
+    redirectClose: alterna/alternatekno/pekerjaan
+update:
+    redirect: alterna/alternatekno/pekerjaan
+    redirectClose: alterna/alternatekno/pekerjaan

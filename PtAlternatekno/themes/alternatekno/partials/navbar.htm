@@ -1,0 +1,41 @@
+<header class="text-gray-600 body-font bg-white" style="position: sticky; top: 0; z-index: 999;">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a href="{{'home'|page}}" x-intersect="$el.classList.add('fadeInDown')">
+            <img src="themes\alternatekno\assets\images\logo.png" alt="Logo" class="w-215 h-25">
+        </a>
+        <style>
+            .active-link {
+                text-decoration: underline;
+                text-decoration-color: #FFA91C;
+                text-underline-offset: 10px;
+                font-weight: bold;
+                text-decoration-thickness: 2px;
+            }
+        </style>
+
+        <!-- Navbar -->
+        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center" x-intersect="$el.classList.add('fadeInDown')">
+            <a href="{{'home'|page}}" class="mr-5 hover:text-gray-900 {{ (this.page.id == 'home') ? 'active-link' : '' }}">Home</a>
+            <a href="{{'tentang'|page}}" class="mr-5 hover:text-gray-900 {{ (this.page.id == 'tentang') ? 'active-link' : '' }}">Tentang Kami</a>
+            <a href="{{'layanan'|page}}" class="mr-5 hover:text-gray-900 {{ (this.page.id == 'layanan') ? 'active-link' : '' }}">Layanan</a>
+            <a href="{{'karir'|page}}" class="mr-5 hover:text-gray-900 {{ (this.page.id == 'karir') ? 'active-link' : '' }}">Karir</a>
+            <a href="{{'portofolio'|page}}" class="mr-5 hover:text-gray-900 {{ (this.page.id == 'portofolio') ? 'active-link' : '' }}">Portofolio</a>
+            <div class="relative inline-block" x-data="{ open: false, timeout: null }">
+                <span class="mr-5 text-gray-900 cursor-pointer flex items-center" @click="clearTimeout(timeout); open = !open">
+                    Produk
+                    <svg class="w-5 h-5 ml-2 transform transition-transform duration-200" :class="{ 'rotate-180': open }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </span>
+                <div class="absolute left-0 w-56 mt-1 origin-top rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" x-show="open" @click.away="timeout = setTimeout(() => { open = false }, 1000)">
+                    <a href="https://klinikaja.com/" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">KlinikAja</a>
+                    <a href="{{'soon'|page}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">TeknoInfoBisnis</a>
+                    <a href="{{'soon'|page}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">MitraInspeksi<a>
+                </div>
+            </div>
+        </nav>
+
+        <button class="inline-flex text-white bg-[#ffa91c] border-0 py-1 px-3 focus:outline-none hover:bg-[#d28e1f] rounded text-base mt-4 md:mt-0" x-intersect="$el.classList.add('fadeInDown')">Hubungi kami sekarang
+        </button>
+    </div>
+</header>

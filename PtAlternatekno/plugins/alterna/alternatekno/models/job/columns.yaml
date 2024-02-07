@@ -1,0 +1,10 @@
+columns:
+    pekerjaan:
+        label: 'nama pekerjaan'
+        type: text
+        searchable: true
+        sortable: true
+    descpekerjaan:
+        label: deskripsi
+        type: text
+        searchable: false

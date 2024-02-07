@@ -1,0 +1,8 @@
+columns:
+    namaproduk:
+        label: 'nama produk'
+        type: text
+        searchable: true
+    link:
+        label: 'link produk'
+        type: text

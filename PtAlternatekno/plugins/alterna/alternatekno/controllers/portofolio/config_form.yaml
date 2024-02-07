@@ -1,0 +1,10 @@
+name: Portofolio
+form: $/alterna/alternatekno/models/portofolio/fields.yaml
+modelClass: Alterna\Alternatekno\Models\Portofolio
+defaultRedirect: alterna/alternatekno/portofolio
+create:
+    redirect: 'alterna/alternatekno/portofolio/update/:id'
+    redirectClose: alterna/alternatekno/portofolio
+update:
+    redirect: alterna/alternatekno/portofolio
+    redirectClose: alterna/alternatekno/portofolio
